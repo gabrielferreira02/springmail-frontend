@@ -1,0 +1,37 @@
+<section class="w-full h-full flex items-center justify-center bg-gray-300">
+    <div class="flex justify-center items-center w-[60%] h-[80%] rounded-lg shadow-2xl bg-white">
+        <div class="w-[50%] h-full bg-green-500 rounded-tl-lg rounded-bl-lg flex items-center justify-center">
+            <div>
+                <img src="assets/images/spring.png" alt="" class="w-[150px] block mx-auto">
+                <h1 class="text-white text-2xl font-bold mt-4 text-center">Bem vindo ao SpringMail</h1>
+                <p class="font-light text-white text-center mt-3">Crie sua conta e comece a interagir com emails para outros usuários</p>
+            </div>
+        </div>
+        <div class="w-[50%]">
+            <form action="" class="px-4">
+                <h1 class="my-4 text-2xl font-bold">Cadastre-se</h1>
+                <div>
+                    <label for="mail" class="block text-bold my-2 font-bold">Nome completo</label>
+                    <div>
+                        <input type="text" name="mail" id="" placeholder="Digite seu nome" class="px-3.5 py-1.5 bg-gray-300 rounded-md placeholder:text-gray-600 placeholder:text-sm outline-green-500 w-full">
+                    </div>
+                </div>
+                <div>
+                    <label for="mail" class="block text-bold my-2 font-bold">Endereço email</label>
+                    <div>
+                        <input type="text" name="mail" id="" placeholder="Digite seu email" class="px-3.5 py-1.5 bg-gray-300 rounded-md placeholder:text-gray-600 placeholder:text-sm outline-green-500 w-full" #emailInput (input)="mailChange(emailInput.value, emailPreview)">
+                    </div>
+                    <p id="email-preview" class="text-sm mt-1" #emailPreview></p>
+                </div>
+                <div>
+                    <label for="password" class="block font-bold my-2 text-bold">Senha</label>
+                    <div>
+                        <input type="password" name="password" id="" placeholder="Digite sua senha" class="px-3.5 py-1.5 bg-gray-300 rounded-md placeholder:text-gray-600 placeholder:text-sm outline-green-500 w-full">
+                    </div>
+                </div>
+                <p class="text-red" id="error"></p>
+                <button type="submit" class="block w-full bg-green-500 py-3 px-4 shadow-md mt-3 text-white font-bold rounded-md cursor-pointer">Entrar</button>
+            </form>
+        </div>
+    </div>
+</section>
