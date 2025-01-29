@@ -1,0 +1,23 @@
+<div class="w-full h-full flex items-center">
+    <div class="w-[18%] h-full bg px-3">
+        <div class="flex items-center my-[20px] ">
+            <img src="assets/images/spring.png" alt="logo application" class="w-[40px]">
+            <p class="text-3xl font-bold text-green-500">SpringMail</p>
+        </div>
+        <div>
+            <a routerLink="" routerLinkActive="bg-green-500/60 text-white" class="text-lg block w-full py-3 rounded-r-4xl px-1 font-bold">Caixa de Entrada</a>
+        </div>
+        <div>
+            <a routerLink="favorites" routerLinkActive="bg-green-500/60 text-white" class="text-lg block w-full py-3 rounded-r-4xl px-1 font-bold">Favoritos</a>
+        </div>
+        <div>
+            <a routerLink="contacts" routerLinkActive="bg-green-500/60 text-white" class="text-lg block w-full py-3 rounded-r-4xl px-1 font-bold">Contatos</a>
+        </div>
+        <div>
+            <a routerLink="account" routerLinkActive="bg-green-500/60 text-white" class="text-lg block w-full py-3 rounded-r-4xl px-1 font-bold">Configuração</a>
+        </div>
+    </div>
+    <div class="w-[80%] h-[90%] rounded-2xl mx-auto bg-gray-400 shadow-xl">
+        <router-outlet />
+    </div>
+</div>
