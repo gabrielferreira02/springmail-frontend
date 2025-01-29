@@ -10,4 +10,15 @@ import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class BoxComponent {
 
+  openWriteMessageBox() {
+    const writeMessageBox = document.getElementById("writeMessageBox");
+    writeMessageBox?.classList.remove("hidden");
+    writeMessageBox?.classList.add("flex");
+  }
+
+  closeWriteMessageBox() {
+    const writeMessageBox = document.getElementById("writeMessageBox");
+    writeMessageBox?.classList.remove("flex");
+    writeMessageBox?.classList.add("hidden");
+  }
 }
