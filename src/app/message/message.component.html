@@ -1,0 +1,29 @@
+<div class="h-full w-full">
+    <div class="px-3">
+        <input type="text" placeholder="Busque por um email por usuário" class="py-3 px-4 w-[60%] bg-gray-700/50 rounded-3xl focus:outline-green-500 mt-2"/>
+    </div>
+    <div class="w-full h-[90%] mt-2 rounded-b-2xl">
+        @if (chats.length == 0) {
+            <div>Nenhuma mensagem na caixa de entrada</div>
+        }
+        @for (item of chats; track $index) {
+            <div class="w-full flex py-2 hover:bg-gray-700/50 transition duration-700 cursor-pointer">
+                <div class="w-[80%] flex">
+                    <p class="w-[50%] px-4 font-bold">{{item.username}}</p>
+                    <p class="w-[50%] font-bold">{{item.subject}}</p>
+                </div>
+                <div class="w-[10%] flex justify-end">
+                    <button>
+                        Favoritar
+                    </button>
+                    <button>
+                        Apagar
+                    </button>
+                </div>
+                <p class="w-[10%] font-bold text-right px-4">28 de jan</p>
+            </div>
+        }
+        
+        
+    </div>
+</div>
