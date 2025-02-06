@@ -26,4 +26,19 @@ export class ApiService {
     this.endpoint = this.url + "/chat/user/" + email;
     return this.http.get(this.endpoint);
   }
+
+  getSentChats(email: string): Observable<any> {
+    this.endpoint = this.url + "/chat/user/sent/" + email;
+    return this.http.get(this.endpoint);
+  }
+
+  getChatsFromByUsername(username: string, email: string): Observable<any> {
+    this.endpoint = this.url + `/chat/user/to?from=${email}&to=${username}`;
+    return this.http.get(this.endpoint);
+  }
+
+  getChatToByUsername(username: string, email: string): Observable<any> {
+    this.endpoint = this.url + `/chat/user/from?from=${username}&to=${email}`;
+    return this.http.get(this.endpoint);
+  }
 }

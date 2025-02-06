@@ -3,6 +3,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { BoxComponent } from './box/box.component';
 import { MessageComponent } from './message/message.component';
+import { SentComponent } from './sent/sent.component';
 
 export const routes: Routes = [
     {path: "", component: LoginComponent},
@@ -11,7 +12,8 @@ export const routes: Routes = [
         path: "box", 
         component: BoxComponent,
         children: [
-            {path: "", component: MessageComponent}
+            {path: "messages", component: MessageComponent},
+            {path: "sent", component: SentComponent}
         ]
     }
 ];
