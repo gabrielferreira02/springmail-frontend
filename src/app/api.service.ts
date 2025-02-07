@@ -41,4 +41,25 @@ export class ApiService {
     this.endpoint = this.url + `/chat/user/from?from=${username}&to=${email}`;
     return this.http.get(this.endpoint);
   }
+
+  favoriteChat(data: any) {
+    this.endpoint = this.url + "/favorite";
+    return this.http.post(this.endpoint, data);
+  }
+
+  deleteFavoriteChat(data: any) {
+    this.endpoint = this.url + `/favorite?userEmail=${data.userEmail}&chatId=${data.chatId}`;
+    return this.http.delete(this.endpoint, data);
+  }
+
+  getFavorites(email: string): Observable<any> {
+    this.endpoint = this.url + "/favorite/" + email;
+    return this.http.get(this.endpoint);
+  }
+
+  getFavoritesByUsername(username: string, email: string): Observable<any> {
+    this.endpoint = this.url + `/favorite?username=${username}&userEmail=${email}`;
+    return this.http.get(this.endpoint);
+  }
+
 }
