@@ -7,8 +7,7 @@ import { UserService } from '../user.service';
   selector: 'app-favorite',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './favorite.component.html',
-  styleUrl: './favorite.component.css'
+  templateUrl: './favorite.component.html'
 })
 export class FavoriteComponent {
   chats: Array<any> = [];

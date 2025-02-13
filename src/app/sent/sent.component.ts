@@ -7,8 +7,7 @@ import { UserService } from '../user.service';
   selector: 'app-sent',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './sent.component.html',
-  styleUrl: './sent.component.css'
+  templateUrl: './sent.component.html'
 })
 export class SentComponent {
   chats: Array<any> = [];

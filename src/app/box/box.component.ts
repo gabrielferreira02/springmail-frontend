@@ -10,8 +10,7 @@ import { UserService } from '../user.service';
   selector: 'app-box',
   standalone: true,
   imports: [RouterOutlet, RouterLink, RouterLinkActive, FormsModule, HttpClientModule],
-  templateUrl: './box.component.html',
-  styleUrl: './box.component.css'
+  templateUrl: './box.component.html'
 })
 export class BoxComponent {
 

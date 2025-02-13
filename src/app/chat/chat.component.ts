@@ -9,8 +9,7 @@ import { UserService } from '../user.service';
   selector: 'app-chat',
   standalone: true,
   imports: [FormsModule],
-  templateUrl: './chat.component.html',
-  styleUrl: './chat.component.css'
+  templateUrl: './chat.component.html'
 })
 export class ChatComponent implements OnInit {
   messages: Array<any> = [];

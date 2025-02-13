@@ -10,8 +10,7 @@ import { UserService } from '../user.service';
   selector: 'app-account',
   standalone: true,
   imports: [FormsModule],
-  templateUrl: './account.component.html',
-  styleUrl: './account.component.css'
+  templateUrl: './account.component.html'
 })
 export class AccountComponent {
   data = {

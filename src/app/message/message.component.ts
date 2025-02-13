@@ -5,8 +5,7 @@ import { ApiService } from '../api.service';
   selector: 'app-message',
   standalone: true,
   imports: [],
-  templateUrl: './message.component.html',
-  styleUrl: './message.component.css'
+  templateUrl: './message.component.html'
 })
 export class MessageComponent {
   chats: Array<any> = [];
