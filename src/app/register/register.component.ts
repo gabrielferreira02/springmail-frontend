@@ -2,17 +2,17 @@ import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { NgModel } from '@angular/forms';
 import { ApiService } from '../api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   standalone: true,
   imports: [FormsModule],
-  templateUrl: './register.component.html',
-  styleUrl: './register.component.css'
+  templateUrl: './register.component.html'
 })
 export class RegisterComponent {
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, private router: Router) {}
 
   mailChange(value: String, previewElement: HTMLElement) {
     previewElement.innerHTML = value + "@springmail.com";
@@ -72,6 +72,9 @@ export class RegisterComponent {
       this.apiService.registerUser(body).subscribe({
         next: response => {
           success!.classList.remove("hidden");
+          setTimeout(() => {
+            this.router.navigate([""]);
+          }, 1000)
         }, 
         error: error => {
           otherError!.innerHTML = error.error.error;
