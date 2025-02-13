@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterOutlet, RouterLink, RouterLinkActive, Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from '../api.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-box',
@@ -14,7 +15,9 @@ import { ApiService } from '../api.service';
 })
 export class BoxComponent {
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, 
+              private userService: UserService,
+              private router: Router) {}
 
   openWriteMessageBox() {
     const writeMessageBox = document.getElementById("writeMessageBox");
@@ -62,7 +65,7 @@ export class BoxComponent {
         "subject": newChat.value.subject,
         "destination": newChat.value.to,
         "content": newChat.value.message,
-        "sender": "4dacd267-9b71-4f1c-8583-ff8c9895e065"
+        "sender": this.userService.getEmail()
       }
 
       this.apiService.createChat(body).subscribe({
@@ -71,7 +74,9 @@ export class BoxComponent {
         },
         error: e => {
             otherError!.innerHTML = e.error.error;
-            console.log(e);
+            if(e.error.status == 403) {
+              this.router.navigate([""]);
+            }
         }
       });
 
