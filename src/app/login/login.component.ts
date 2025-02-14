@@ -13,6 +13,8 @@ import { UserService } from '../user.service';
   templateUrl: './login.component.html'
 })
 export class LoginComponent {
+  mail: string = "gabrielf@springmail.com";
+  password: string = "12345678";
   constructor(private router: Router, private apiService: ApiService, private userService: UserService) {}
 
   onSubmit(login: NgForm) {

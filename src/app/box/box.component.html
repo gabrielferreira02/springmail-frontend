@@ -1,5 +1,11 @@
-<div class="w-full h-full flex items-center dark:bg-gray-900">
-    <div class="w-[18%] h-full bg px-3">
+<div class="w-full h-full flex items-center dark:bg-gray-900 max-[1150px]:relative max-[1150px]:block">
+    <div>
+        <div class="hidden max-[1150px]:flex items-center my-[20px] gap-1.5 px-3">
+            <img src="assets/images/spring.png" alt="logo application" class="w-[30px]">
+            <p class="text-xl font-bold text-green-500">SpringMail</p>
+        </div>
+    </div>
+    <div class="w-[18%] h-full bg px-3 max-[1150px]:absolute max-[1150px]: top-0 max-[1150px]:left-[-100%] max-[1150px]:h-screen">
         <div class="flex items-center my-[20px] gap-1.5">
             <img src="assets/images/spring.png" alt="logo application" class="w-[40px]">
             <p class="text-3xl font-bold text-green-500">SpringMail</p>
@@ -83,7 +89,7 @@
             </a>
         </div>
     </div>
-    <div class="reltive w-[80%] h-[90%] rounded-2xl mx-auto bg-gray-400 shadow-xl">
+    <div class="reltive w-[80%] h-[90%] rounded-2xl mx-auto bg-gray-400 shadow-xl max-[1150px]:w-full max-[1150px]:bg-white max-[1150px]:rounded-none max-[1150px]:shadow-none">
         <router-outlet />
     </div>
 </div>

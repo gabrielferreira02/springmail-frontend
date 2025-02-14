@@ -13,13 +13,13 @@
                 <div>
                     <label for="mail" class="block text-bold my-2 font-bold dark:text-white">Endereço email</label>
                     <div>
-                        <input type="text" name="mail" id="" ngModel placeholder="Digite seu email" class="px-3.5 py-1.5 bg-gray-300 rounded-md placeholder:text-gray-600 placeholder:text-sm focus:outline-green-500 w-full dark:bg-gray-600 dark:placeholder:text-black  dark:text-white">
+                        <input type="text" name="mail" [(ngModel)]="mail" placeholder="Digite seu email" class="px-3.5 py-1.5 bg-gray-300 rounded-md placeholder:text-gray-600 placeholder:text-sm focus:outline-green-500 w-full dark:bg-gray-600 dark:placeholder:text-black  dark:text-white">
                     </div>
                 </div>
                 <div>
                     <label for="password" class="block font-bold my-2 text-bold dark:text-white">Senha</label>
                     <div>
-                        <input type="password" name="password" ngModel id="" placeholder="Digite sua senha" class="px-3.5 py-1.5 bg-gray-300 rounded-md placeholder:text-gray-600 placeholder:text-sm outline-green-500 w-full dark:bg-gray-600 dark:placeholder:text-black dark:text-white">
+                        <input type="password" name="password" [(ngModel)]="password" placeholder="Digite sua senha" class="px-3.5 py-1.5 bg-gray-300 rounded-md placeholder:text-gray-600 placeholder:text-sm outline-green-500 w-full dark:bg-gray-600 dark:placeholder:text-black dark:text-white">
                     </div>
                 </div>
                 <p class="text-red-600" id="error"></p>
