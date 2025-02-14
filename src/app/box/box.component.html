@@ -1,12 +1,21 @@
 <div class="w-full h-full flex items-center dark:bg-gray-900 max-[1150px]:relative max-[1150px]:block">
-    <div>
-        <div class="hidden max-[1150px]:flex items-center my-[20px] gap-1.5 px-3">
+    <div class="hidden max-[1150px]:flex items-center justify-between px-2">
+        <div class="flex items-center my-[20px] gap-1.5 px-3">
             <img src="assets/images/spring.png" alt="logo application" class="w-[30px]">
             <p class="text-xl font-bold text-green-500">SpringMail</p>
         </div>
+        <div class="px-3 cursor-pointer relative z-40" (click)="openCloseMenu()" id="menuButton">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6" class="h-[25px]" id="openIcon">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6" class="h-[25px] hidden" id="closeIcon">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>                            
+        </div>
     </div>
-    <div class="w-[18%] h-full bg px-3 max-[1150px]:absolute max-[1150px]: top-0 max-[1150px]:left-[-100%] max-[1150px]:h-screen">
-        <div class="flex items-center my-[20px] gap-1.5">
+    <div class="w-[18%] h-full bg px-3 max-[1150px]:absolute max-[1150px]: top-0 max-[1150px]:left-[-100%] max-[1150px]:h-screen max-[1150px]:w-[320px] max-[1150px]:bg-white max-[1150px]:transition-all max-[1150px]:duration-500 max-[1150px]:shadow-xl" id="menu">
+        <h1 class="text-2xl mt-3 font-bold hidden max-[1150px]:block">Menu</h1>
+        <div class="flex items-center my-[20px] gap-1.5 max-[1150px]:hidden">
             <img src="assets/images/spring.png" alt="logo application" class="w-[40px]">
             <p class="text-3xl font-bold text-green-500">SpringMail</p>
         </div>
@@ -17,8 +26,8 @@
                   </svg>    
                   Escrever              
             </button>
-            <div class="w-full h-full bg-gray-900/50 absolute top-0 left-0 items-center justify-center hidden" id="writeMessageBox">
-                <div class="w-[50%] h-[90%] shadow-lg overflow-y-scroll bg-white rounded-2xl dark:bg-gray-700">
+            <div class="w-full h-full bg-gray-900/50 absolute top-0 left-0 items-center justify-center hidden max-[1150px]:fixed max-[500px]:w-full z-50" id="writeMessageBox">
+                <div class="w-[50%] h-[90%] shadow-lg overflow-y-scroll bg-white rounded-2xl dark:bg-gray-700 max-[1150px]:w-[80%] max-[500px]:w-full max-[500px]:h-full max-[500px]:rounded-none">
                     <div class="flex items-center justify-between px-5">
                         <h1 class="font-bold text-lg my-3 dark:text-white">Nova mensagem</h1>
                         <button class="flex items-center justify-center rounded-full h-[40px] w-[40px] cursor-pointer hover:bg-gray-700/45 transition duration-700 dark:hover:bg-white/50 dark:text-white" (click)="closeWriteMessageBox()">

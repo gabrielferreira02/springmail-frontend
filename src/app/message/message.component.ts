@@ -15,7 +15,6 @@ export class MessageComponent {
   constructor(private apiService: ApiService, private userService: UserService, private router: Router) {
     this.apiService.getChats(this.userService.getEmail()).subscribe({
       next: response => {
-        console.log(response);
         this.chats = response;
       }
     })
@@ -72,7 +71,6 @@ export class MessageComponent {
   reload() {
     this.apiService.getChats(this.userService.getEmail()).subscribe({
       next: response => {
-        console.log(response);
         this.chats = response;
       },
       error: response => {

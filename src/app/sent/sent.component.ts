@@ -17,7 +17,6 @@ export class SentComponent {
               private router: Router) {
     this.apiService.getSentChats(this.userService.getEmail()).subscribe({
       next: response => {
-        console.log(response);
         this.chats = response;
       },
       error: response => {
@@ -31,7 +30,6 @@ export class SentComponent {
   reload() {
     this.apiService.getSentChats(this.userService.getEmail()).subscribe({
       next: response => {
-        console.log(response);
         this.chats = response;
       },
       error: response => {

@@ -17,7 +17,6 @@ export class FavoriteComponent {
               private router: Router) {
     this.apiService.getFavorites(this.userService.getEmail()).subscribe({
       next: response => {
-        console.log(response);
         this.chats = response;
       },
       error: response => {
@@ -31,7 +30,6 @@ export class FavoriteComponent {
   reload() {
     this.apiService.getSentChats(this.userService.getEmail()).subscribe({
       next: response => {
-        console.log(response);
         this.chats = response;
       },
       error: response => {

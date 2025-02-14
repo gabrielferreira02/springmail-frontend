@@ -81,4 +81,22 @@ export class BoxComponent {
 
     }
   }
+
+  openCloseMenu() {
+    const menu = document.getElementById("menu");
+    const openIcon = document.getElementById("openIcon");
+    const closeIcon = document.getElementById("closeIcon");
+
+    if(menu?.classList.contains("max-[1150px]:left-[-100%]")) {
+      menu?.classList.remove("max-[1150px]:left-[-100%]");
+      menu?.classList.add("max-[1150px]:left-0");
+      openIcon?.classList.add("hidden");
+      closeIcon?.classList.remove("hidden");
+    } else {
+      menu?.classList.remove("max-[1150px]:left-0");
+      menu?.classList.add("max-[1150px]:left-[-100%]");
+      openIcon?.classList.remove("hidden");
+      closeIcon?.classList.add("hidden");
+    }
+  }
 }
