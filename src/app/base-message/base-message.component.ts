@@ -9,21 +9,21 @@ import { RouterLink } from '@angular/router';
   styles: ``
 })
 export class BaseMessageComponent {
-  @Input() chats: any[] = []; // Lista de chats
-  @Output() searchChange = new EventEmitter<string>(); // Evento de busca
-  @Output() reloadClicked = new EventEmitter<void>(); // Evento de recarregar
-  @Output() favoriteClicked = new EventEmitter<any>(); // Evento de favoritar
+  @Input() chats: any[] = []; 
+  @Output() searchChange = new EventEmitter<string>(); 
+  @Output() reloadClicked = new EventEmitter<void>(); 
+  @Output() favoriteClicked = new EventEmitter<any>(); 
 
   onChange(searchTerm: string): void {
-    this.searchChange.emit(searchTerm); // Emite o termo de busca
+    this.searchChange.emit(searchTerm); 
   }
 
   reload(): void {
-    this.reloadClicked.emit(); // Emite o evento de recarregar
+    this.reloadClicked.emit();
   }
 
   favorite(item: any): void {
-    this.favoriteClicked.emit(item); // Emite o item favoritado
+    this.favoriteClicked.emit(item); 
   }
 
   setColor(c: string): string {

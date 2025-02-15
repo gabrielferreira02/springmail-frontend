@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule, NgForm } from '@angular/forms';
-import { NgModel } from '@angular/forms';
 import { UserService } from '../user.service';
 
 @Component({
@@ -27,7 +26,6 @@ export class ChatComponent implements OnInit {
 
     this.apiService.getMessagesByChatId(this.chatId).subscribe({
       next: response => {
-        console.log(response);
         this.messages = response;
       },
       error: response => {
@@ -39,7 +37,6 @@ export class ChatComponent implements OnInit {
 
     this.apiService.getChatInformation(this.chatId).subscribe({
       next: response => {
-        console.log(response)
         this.to = response.toEmail;
         this.subject = response.subject;
         },
