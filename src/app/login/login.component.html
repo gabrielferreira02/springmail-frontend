@@ -1,0 +1,31 @@
+<section class="w-full h-full max-[600px]:h-auto flex items-center justify-center bg-gray-300 dark:bg-gray-900">
+    <div class="flex max-[720px]:block justify-center items-center lg:w-[60%] max-[740px]:w-full max-[600px]:w-full h-[80%] max-[600px]:min-h-screen rounded-lg shadow-2xl bg-white">
+        <div class="max-[500px]:w-full md:w-[50%] lg:w-[50%] sm:w-full max-[600px]:py-12 sm:py-12 md:py-0 lg:py-0 h-full max-[600px]:h-auto bg-green-500 rounded-tl-lg rounded-bl-lg max-[500px]:rounded-b-3xl flex items-center justify-center">
+            <div>
+                <img src="assets/images/spring.png" alt="" class="w-[150px] block mx-auto">
+                <h1 class="text-white text-2xl font-bold mt-4 text-center">Bem vindo ao SpringMail</h1>
+                <p class="font-light text-white text-center mt-3 xsm:text-sm max-[500px]:px-4">Entre em sua conta e fique por dentro de todas suas novas mensagens.</p>
+            </div>
+        </div>
+        <div class="max-[500px]:w-full max-[500px]:py-6 md:w-[50%] lg:w-[50%] sm:w-full h-full max-[600px]:h-auto max-[600px]:py-12 dark:bg-gray-700 flex items-center rounded-tr-lg rounded-br-lg">
+            <form class="px-4 w-full" #login="ngForm" (ngSubmit)="onSubmit(login)">
+                <h1 class="my-4 text-2xl font-bold dark:text-white">Fazer Login</h1>
+                <div>
+                    <label for="mail" class="block text-bold my-2 font-bold dark:text-white">Endereço email</label>
+                    <div>
+                        <input type="text" name="mail" [(ngModel)]="mail" placeholder="Digite seu email" class="px-3.5 py-1.5 bg-gray-300 rounded-md placeholder:text-gray-600 placeholder:text-sm focus:outline-green-500 w-full dark:bg-gray-600 dark:placeholder:text-black  dark:text-white">
+                    </div>
+                </div>
+                <div>
+                    <label for="password" class="block font-bold my-2 text-bold dark:text-white">Senha</label>
+                    <div>
+                        <input type="password" name="password" [(ngModel)]="password" placeholder="Digite sua senha" class="px-3.5 py-1.5 bg-gray-300 rounded-md placeholder:text-gray-600 placeholder:text-sm outline-green-500 w-full dark:bg-gray-600 dark:placeholder:text-black dark:text-white">
+                    </div>
+                </div>
+                <p class="text-red-600" id="error"></p>
+                <button type="submit" class="block w-full bg-green-500 py-3 px-4 shadow-md mt-3 text-white font-bold rounded-md cursor-pointer dark:text-gray-900">Entrar</button>
+                <a routerLink="/register" class="text-sm underline block text-center mt-3 dark:text-white">Não tem conta? Registre-se aqui</a>
+            </form>
+        </div>
+    </div>
+</section>
