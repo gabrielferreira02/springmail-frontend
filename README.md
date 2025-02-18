@@ -1,28 +1,33 @@
-# CloneSpringmail
+#  SpringmailFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
-## Development server
+This project is part of a fullstack simplified email application that works with protected routes, token jwt, login and register, styles with tailwindcss and interceptors. In login page the inputs has a initial value to work with backend data. So if you dont want to register a new user, you can use this credentials to use the application.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+First, to run this application you need to clone the backend part in the following link. In readme file has all instructions to run the backend with success
+```bash
+  https://github.com/gabrielferreira02/springmail-backend/
+```
 
-## Code scaffolding
+Now that you have the backend ruuning, you can clone the project and go to the generated folder
+```bash
+  git clone https://github.com/gabrielferreira02/springmail-frontend.git
+  cd springmail-frontend
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Install project dependencies
+```bash
+  npm install
+```
 
-## Build
+If when installing dependencies occur an error with angular and tailwind versions, use this command
+```bash
+  npm install --force
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# springmail-frontend
+Then, start the angular application and see it running in your browser
+```bash
+  ng serve
+```
