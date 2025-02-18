@@ -9,7 +9,8 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class ApiService {
 
-  private url: string = "http://localhost:8080"; 
+  // private url: string = "http://localhost:8080"; 
+  private url: string = "https://springmail-backend.onrender.com"; 
   private endpoint: string = "";
   private headers: { [key: string]: string } = {};
 
