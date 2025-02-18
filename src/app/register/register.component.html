@@ -1,34 +1,34 @@
-<section class="w-full h-full max-[600px]:h-auto flex items-center justify-center bg-gray-300 dark:bg-gray-900">
-    <div class="flex max-[720px]:block justify-center items-center lg:w-[60%] max-[740px]:w-full max-[600px]:w-full h-[80%] max-[600px]:min-h-screen rounded-lg shadow-2xl bg-white">
-        <div class="max-[500px]:w-full md:w-[50%] lg:w-[50%] sm:w-full max-[600px]:py-12 sm:py-12 md:py-0 lg:py-0 h-full max-[600px]:h-auto bg-green-500 rounded-tl-lg rounded-bl-lg max-[500px]:rounded-b-3xl flex items-center justify-center">
+<section class="w-full h-full max-[600px]:h-full flex items-center justify-center bg-gray-300 dark:bg-gray-900">
+    <div class="flex max-[720px]:block justify-center items-center lg:w-[60%] max-[740px]:w-full max-[600px]:w-full h-[80%] max-[500px]:h-full max-[600px]:min-h-screen rounded-lg shadow-2xl bg-white max-[600px]:dark:bg-gray-700">
+        <div class="max-[500px]:w-full md:w-[50%] lg:w-[50%] sm:w-full max-[600px]:py-12 sm:py-12 md:py-0 lg:py-0 h-full max-[600px]:h-auto bg-green-500 rounded-tl-lg rounded-bl-lg max-[500px]:rounded-none flex items-center justify-center">
             <div>
                 <img src="assets/images/spring.png" alt="" class="w-[150px] block mx-auto">
                 <h1 class="text-white text-2xl font-bold mt-4 text-center">Bem vindo ao SpringMail</h1>
                 <p class="font-light text-white text-center mt-3 xsm:text-sm max-[500px]:px-4">Crie sua conta e comece a interagir com emails para outros usuários</p>
             </div>
         </div>
-        <div class="max-[500px]:w-full max-[500px]:py-6 md:w-[50%] lg:w-[50%] sm:w-full h-full max-[600px]:h-auto max-[600px]:py-12 dark:bg-gray-700 flex items-center rounded-tr-lg rounded-br-lg">
+        <div class="max-[500px]:w-full max-[500px]:py-6 md:w-[50%] lg:w-[50%] sm:w-full h-full max-[600px]:h-full max-[600px]:py-12 dark:bg-gray-700 flex items-center rounded-tr-lg rounded-br-lg max-[600px]:rounded-none">
             <form #register="ngForm" (ngSubmit)="onSubmit(register)" class="px-4 w-full">
                 <p class="bg-green-500 text-white py-2 px-3 rounded-md hidden" id="success">Cadastrado com sucesso!</p>
                 <p class="text-red-600" id="otherError"></p>
-                <h1 class="my-4 text-2xl font-bold">Cadastre-se</h1>
+                <h1 class="my-4 text-2xl font-bold dark:text-white">Cadastre-se</h1>
                 <div>
-                    <label for="text" class="block text-bold my-2 font-bold">Nome completo</label>
+                    <label for="text" class="block text-bold my-2 font-bold dark:text-white">Nome completo</label>
                     <div>
                         <input type="text" name="username" ngModel placeholder="Digite seu nome" class="px-3.5 py-1.5 bg-gray-300 rounded-md placeholder:text-gray-600 placeholder:text-sm outline-green-500 w-full">
                     </div>
                     <p class="text-red-600" id="usernameError"></p>
                 </div>
                 <div>
-                    <label for="text" class="block text-bold my-2 font-bold">Endereço email</label>
+                    <label for="text" class="block text-bold my-2 font-bold dark:text-white">Endereço email</label>
                     <div>
-                        <input type="text" name="mail" ngModel placeholder="Digite seu email" class="px-3.5 py-1.5 bg-gray-300 rounded-md placeholder:text-gray-600 placeholder:text-sm outline-green-500 w-full" #emailInput (input)="mailChange(emailInput.value, emailPreview)">
+                        <input type="text" name="mail" ngModel placeholder="Digite seu email" class="px-3.5 py-1.5 bg-gray-300 rounded-md placeholder:text-gray-600 placeholder:text-sm outline-green-500 w-full dark:text-white" #emailInput (input)="mailChange(emailInput.value, emailPreview)">
                     </div>
                     <p id="email-preview" class="text-sm mt-1" #emailPreview></p>
                     <p class="text-red-600" id="mailError"></p>
                 </div>
                 <div>
-                    <label for="password" class="block font-bold my-2 text-bold">Senha</label>
+                    <label for="password" class="block font-bold my-2 text-bold dark:text-white">Senha</label>
                     <div>
                         <input type="password" ngModel name="password" id="" placeholder="Digite sua senha" class="px-3.5 py-1.5 bg-gray-300 rounded-md placeholder:text-gray-600 placeholder:text-sm outline-green-500 w-full">
                     </div>
