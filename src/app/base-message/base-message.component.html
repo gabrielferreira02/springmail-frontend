@@ -14,14 +14,14 @@
         @for (item of chats; track $index) {
             <a routerLink="/box/messages/{{item.id}}" class="hidden max-[650px]:flex max-[650px]:items-center w-full py-2 hover:bg-gray-700/50 transition duration-700 cursor-pointer">
                 <div class="w-[75%] px-4">
-                    <div class="flex gap-3 items-center">
+                    <div class="flex gap-2 items-center">
                         <div class="w-10 h-10 flex items-center justify-center text-2xl font-bold rounded-full max-[1150px]:dark:text-white {{setColor(item.username.charAt(0).toUpperCase())}}">{{item.username.charAt(0).toUpperCase()}}</div>
                         <div class="w-[75%]">
                             <p class="w-full truncate max-[1150px]:dark:text-white" [class.font-bold]="!item.isRead">{{item.username}}</p>
                             <p class="w-full truncate max-[1150px]:dark:text-white" [class.font-bold]="!item.isRead">{{item.subject}}</p>
                         </div>
                     </div>
-                    <p class="w-full pl-13 truncate max-[1150px]:dark:text-white" [class.font-bold]="!item.isRead">{{item.message}}</p>
+                    <p class="w-full pl-12 truncate max-[1150px]:dark:text-white" [class.font-bold]="!item.isRead">{{item.message}}</p>
                 </div>
                 <div class="w-[10%] flex justify-end gap-2">
                     <button (click)="favorite(item); $event.preventDefault(); $event.stopPropagation();" class="cursor-pointer">
@@ -40,8 +40,8 @@
             </a>
             <a routerLink="/box/messages/{{item.id}}" class="w-full max-[650px]:hidden flex py-2 hover:bg-gray-700/50 transition duration-700 cursor-pointer">
                 <div class="w-[80%] flex">
-                    <p class="w-[50%] px-4 truncate" [class.font-bold]="!item.isRead">{{item.username}}</p>
-                    <p class="w-[50%] truncate" [class.font-bold]="!item.isRead">{{item.subject}}</p>
+                    <p class="w-[50%] px-4 truncate max-[1150px]:dark:text-white" [class.font-bold]="!item.isRead">{{item.username}}</p>
+                    <p class="w-[50%] truncate max-[1150px]:dark:text-white" [class.font-bold]="!item.isRead">{{item.subject}}</p>
                 </div>
                 <div class="w-[10%] flex justify-end gap-2">
                     <button (click)="favorite(item); $event.preventDefault(); $event.stopPropagation();" class="cursor-pointer">
@@ -56,7 +56,7 @@
                         }
                     </button>
                 </div>
-                <p class="w-[10%] text-right px-4" [class.font-bold]="!item.isRead">{{getDate(item.updatedAt)}}</p>
+                <p class="w-[10%] text-right px-4 max-[1150px]:dark:text-white" [class.font-bold]="!item.isRead">{{getDate(item.updatedAt)}}</p>
             </a>
         }
     </div>

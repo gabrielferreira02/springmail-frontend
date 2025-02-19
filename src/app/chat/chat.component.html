@@ -1,4 +1,4 @@
-<div class="w-full h-full overflow-y-scroll max-[1150px]:dark:bg-gray-900">
+<div class="w-full h-full max-[750px]:h-screen overflow-y-scroll max-[1150px]:dark:bg-gray-900">
     <h1 class="font-bold text-xl my-3 px-3 max-[1150px]:dark:text-white">Assunto: {{subject}}</h1>
     <h2 class="font-medium text-md my-3 px-3 max-[1150px]:dark:text-white">Para: {{to}}</h2>
     @for (item of messages; track $index) {
@@ -17,7 +17,7 @@
         <div class="w-full h-[1px] opacity-35 bg-black max-[1150px]:dark:bg-white"></div>
     }
     <div class="h-[130px]"></div>
-    <form #reply="ngForm" (ngSubmit)="replyChat(reply)" class="absolute bottom-8 left-1/2 -translate-x-[40%] w-[60%] mx-auto max-[650px]:w-full max-[650px]:px-2 max-[650px]:left-0 max-[650px] max-[650px]:translate-x-0">
+    <form #reply="ngForm" (ngSubmit)="replyChat(reply)" class="absolute bottom-8 left-1/2 -translate-x-[40%] w-[60%] mx-auto max-[650px]:w-full max-[650px]:px-2 max-[650px]:left-0 max-[650px] max-[650px]:translate-x-0 max-[1150px]:translate-x-[-70%]">
         <p id="error" class="w-full px-3 py-1 bg-red-600 text-white hidden rounded-md mb-1">A mensagem não pode estar vazia</p>
         <p id="success" class="w-full px-3 py-1 bg-green-600 text-white hidden rounded-md mb-1">Mensagem enviada!</p>
         <div class="w-full max-[650px]:flex max-[650px]:items-center max-[650px]:justify-center max-[650px]:gap-2">
