@@ -6,7 +6,12 @@
 
 This project is part of a fullstack simplified email application that works with protected routes, token jwt, login and register, styles with tailwindcss and interceptors. In login page the inputs has a initial value to work with backend data. So if you dont want to register a new user, you can use this credentials to use the application.
 
-First, to run this application you need to clone the backend part in the following link. In readme file has all instructions to run the backend with success
+Here is the link of running application. If the backend part is offline send me an email because the host is free and it crashes sometimes
+```bash
+  https://springmail.netlify.app
+```
+
+First, to run this application locally, you need to clone the backend part in the following link. In readme file has all instructions to run the backend with success
 ```bash
   https://github.com/gabrielferreira02/springmail-backend/
 ```
