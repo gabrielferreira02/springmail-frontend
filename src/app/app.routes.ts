@@ -8,9 +8,11 @@ import { FavoriteComponent } from './favorite/favorite.component';
 import { AccountComponent } from './account/account.component';
 import { ChatComponent } from './chat/chat.component';
 import { authGuard } from './auth.guard';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 export const routes: Routes = [
     {path: "", component: LoginComponent},
+    {path: "**", component: PageNotFoundComponent},
     {path: "register", component: RegisterComponent},
     {
         path: "box", 
