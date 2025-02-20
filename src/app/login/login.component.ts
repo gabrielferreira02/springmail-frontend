@@ -41,7 +41,6 @@ export class LoginComponent {
         next: response => {
           this.userService.setEmail(response.email);
           this.userService.setToken(response.token);
-          console.log(response.token)
           setTimeout(() => {
             this.router.navigate(["/box/messages"]);
           }, 2000)
